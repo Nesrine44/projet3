@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<a class="btn btn-primary btn-sm" href="/">Retour</a>
+<hr>
+<h2>Les informations</h2>
+<ul class="list-group"></ul>
+<li class="list-group-item">Famille : {{todo.famille}}</li>
+<li class="list-group-item"> Age: {{todo.age}} </li>
+<li class="list-group-item"> Race: {{todo.race}} </li>
+<li class="list-group-item"> Nourriture: {{todo.nourriture}} </li>
+</ul>
+
+{% endblock %}

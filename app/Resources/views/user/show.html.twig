@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<a class="btn btn-success btn-sm" href="{{ path('user_index') }}">Back to the list</a>
+<hr>
+    <h2>Contact</h2>
+	
+	<ul class="list-group"></ul>
+<li class="list-group-item">Nom : {{user.username}}</li>
+<li class="list-group-item"> Email: {{user.Email}} </li>
+
+
+   </br>
+
+			
+			<ul>
+      	
+			
+	
+
+        
+				{{ form_start(delete_form) }}
+					<input class="btn btn-danger btn-sm" type="submit" value="Delete">
+        <a class="btn btn-default btn-sm" href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a>
+				{{ form_end(delete_form) }}
+			
+        
+            </ul>
+   
+{% endblock %}

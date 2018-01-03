@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+
+   
+
+ <div class="col-md-12 col-sm-push-3">
+
+        
+        <h1>Bienvenue</h1>
+
+<img src="{{ asset('bundles/images/image.png') }}" alt="image"   />
+</br>
+<ul>
+   <a class="btn btn-danger btn-sm " href="/todo/listeami">Liste D'amis</a>
+
+<a class="btn btn-danger btn-sm" href="/todo/create">Ajouter ami</a>
+</ul>
+
+
+
+
+  </div>
+
+
+<style>
+ul{
+    text-align:center;
+    margin: 60px;
+    display: inline;
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

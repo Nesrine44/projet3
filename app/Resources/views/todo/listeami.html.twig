@@ -1,0 +1,57 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<a class="btn btn-danger btn-sm " href="/todo/create">Ajouter Ami</a>
+<h3 class="page-header">Liste Des Moustiques de l'Utilisateur:{{user.username}}</h3>
+<table class="table table-bordered  table-hover"> 
+<thead> <tr>
+ <th>#</th> 
+ <th>Age</th>
+ <th>Famille</th>
+  <th>Race</th>
+    <th>Nourriture</th>
+	  <th>Email</th>
+   </tr>
+ </thead> 
+ <tbody>
+ 
+
+
+ 
+ 
+ 
+{% for todo in user.todos %}
+  <tr>
+   <th scope="row">{{todo.id}}</th>
+   <td>{{todo.age}}</td>
+   <td>{{todo.famille}}</td>
+     <td>{{todo.race}}</td>
+     <td>{{todo.nourriture}}</td>
+	  <td>{{todo.email}}</td>
+	 
+    
+   <td>
+   <a href="/todo/details/{{todo.id}}" class="btn btn-success btn-sm">View</a>
+   
+    <a href="/todo/edit/{{todo.id}}" class="btn btn-default btn-sm">Edit</a>
+   
+    <a href="/todo/delete/{{todo.id}}" class="btn btn-danger btn-sm">Delete</a>
+   </td>
+   </tr>
+
+ {% endfor %}
+
+   
+
+ </tbody> </table>
+
+
+
+{% endblock %}
+
+
+
+
+
+  

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+ <a class="btn btn-danger btn-sm" href="{{ path('user_index') }}">Back to the list</a>
+   <hr>
+   
+    <h3>Contact edit</h3>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input class="btn btn-success btn-sm" type="submit" value="Save" />
+    {{ form_end(edit_form) }}
+
+	<table>
+    <tr>
+    
+           
+      
+        <td>
+            {{ form_start(delete_form) }}
+            
+                <input class="btn btn-danger btn-sm" type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </td>
+    </tr>
+	</table>
+{% endblock %}
